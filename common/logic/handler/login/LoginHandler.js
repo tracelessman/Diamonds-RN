@@ -1,12 +1,13 @@
 
-var loginHandler = {
-    needLogin : function () {
+class LoginHandler{
+    needLogin(){
         return false;
-    },
-    getLogin :function () {
-      return null;
-    },
-    login : function () {
+    }
+    getLogin(){
+        return null;
+    }
+    login(){
         return null;
     }
 }
+module.exports = LoginHandler;
