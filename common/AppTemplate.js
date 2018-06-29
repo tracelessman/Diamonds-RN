@@ -1,0 +1,5 @@
+var AppTemplate = {
+    getLoginHandler:function () {
+
+    }
+}
