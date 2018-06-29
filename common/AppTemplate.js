@@ -1,5 +1,5 @@
 import LogcalLoginHandler from "./logic/handler/login/LocalLoginHandler"
-var AppTemplate = {
+const AppTemplate = {
     getLoginHandler:function () {
         if(!this.loginHandler){
             return new LogcalLoginHandler();

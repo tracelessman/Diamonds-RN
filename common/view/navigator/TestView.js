@@ -1,6 +1,4 @@
-
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     AsyncStorage,
     NativeModules,
@@ -9,22 +7,22 @@ import {
     View,
 } from 'react-native';
 
-export default class PassLoginView extends Component<{}> {
+export default class TestView extends Component<{}> {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={};
+        this.state = {};
     }
 
-    componentDidMount=()=>{
+    componentDidMount = () => {
 
     }
 
-    componentWillUnmount=()=>{
+    componentWillUnmount = () => {
     }
 
 
-    componentWillUnmount =()=> {
+    componentWillUnmount = () => {
 
     }
 
@@ -32,7 +30,7 @@ export default class PassLoginView extends Component<{}> {
         return (
             <View>
                 <Text>
-                    PassLoginView
+                    test
                 </Text>
             </View>
         );

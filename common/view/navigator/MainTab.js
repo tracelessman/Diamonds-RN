@@ -5,6 +5,7 @@ import { Button,Image,TouchableOpacity,View,Text} from 'react-native';
 import {TabNavigator } from 'react-navigation';
 import {StackNavigator}from "react-navigation";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import TestView from './TestView'
 const iconSize = 26
 
 let style = {display:"flex",justifyContent:"center",alignItems:"center"}
@@ -21,7 +22,17 @@ function getTabLogo(title,focused,iconName){
 
 
 const MainTabs = TabNavigator({
+    tab1: {
+        screen: TestView,
+        navigationOptions: {
+            tabBarLabel: '消息',
+            title:'消息',
 
+            // tabBarIcon: ({ tintColor, focused }) =>{
+            //     return getTabLogo('通讯录',focused,"table-of-contents" )
+            // }
+        }
+    },
     }, {
         // initialRouteName: routeName ,
         swipeEnabled: false,
@@ -49,7 +60,18 @@ const MainTabs = TabNavigator({
     }
 );
 let MainStack = StackNavigator({
+    MainTabView: {
+        screen: MainTabs,
+        navigationOptions:{
 
+        }
+    },
+    TestView: {
+        screen: TestView,
+        navigationOptions:{
+            headerTitle: '版本信息'
+        }
+    },
 }, {
     transitionConfig:function transitionConfig(){
         return {

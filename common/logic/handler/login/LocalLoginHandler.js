@@ -1,5 +1,6 @@
 import User from "../../../store/User"
 import Login from "../../bean/Login"
+const LoginHandler = require("./LoginHandler")
 class LocalLoginHandler extends LoginHandler{
     needLogin(){
         return true;
@@ -8,7 +9,7 @@ class LocalLoginHandler extends LoginHandler{
        return User.userExits();
     }
     getLogin(){
-        return ths.login;
+        return this.login;
     }
     login(id,name,pass,callback){
         //TODO check pass md5

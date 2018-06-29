@@ -8,8 +8,9 @@ import {
     StyleSheet, Text,
     View,
 } from 'react-native';
+import MainTab from "./MainTab"
 
-export default class PassLoginView extends Component<{}> {
+export default class MainView extends Component<{}> {
 
     constructor(props){
         super(props);
@@ -29,13 +30,7 @@ export default class PassLoginView extends Component<{}> {
     }
 
     render() {
-        return (
-            <View>
-                <Text>
-                    PassLoginView
-                </Text>
-            </View>
-        );
+        return MainTab;
     }
 
 }

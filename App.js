@@ -1,58 +1,57 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+    Alert,
+    AsyncStorage,
+    Linking,
+    NativeModules,Platform,
+    StyleSheet,Text,View,PushNotificationIOS,AppState
 } from 'react-native';
+import entryUtil from "./common/util/entryUtil"
+import {Root, Spinner, Toast} from "native-base"
+import LKApp from './lk/LKAPP'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+entryUtil.init()
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
-  }
+export default class App extends Component<{}> {
+    constructor(props){
+        super(props);
+    }
+
+    componentWillMount =()=> {
+
+    }
+
+    componentWillUnmount =()=> {
+
+    }
+
+    render() {
+
+        return (
+            <Root>
+                <View style={styles.container}>
+                    <LKApp></LKApp>
+                </View>
+            </Root>
+
+        );
+    }
+
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    container: {
+        flex: 1
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+    },
+    instructions: {
+        textAlign: 'center',
+        color: '#333333',
+        marginBottom: 5,
+    },
 });

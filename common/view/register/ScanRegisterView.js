@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react';
 import {
     AsyncStorage,
@@ -9,7 +8,7 @@ import {
     View,
 } from 'react-native';
 
-export default class PassLoginView extends Component<{}> {
+export default class ScanRegiseterView extends Component<{}> {
 
     constructor(props){
         super(props);
@@ -32,7 +31,8 @@ export default class PassLoginView extends Component<{}> {
         return (
             <View>
                 <Text>
-                    PassLoginView
+                    ScanRegiseterView
+
                 </Text>
             </View>
         );
